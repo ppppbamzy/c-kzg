@@ -7,7 +7,7 @@ FetchContent_Declare(blst
 
 # FetchContent_MakeAvailable(blst)
 FetchContent_GetProperties(blst)
-if(NOT miracl_POPULATED)
+if(NOT blst_POPULATED)
     FetchContent_Populate(blst)
 endif()
 
