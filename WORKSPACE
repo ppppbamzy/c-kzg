@@ -3,7 +3,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
   name = "com_github_blst",
   build_file = "//bazel:BUILD.blst",
-  sha256 = "e5d2350e397fe4a288c5f45774e28e6a800d32fdd8e3d68712ab5c2d67ddda80",
+  sha256 = "d5c5c00feddff1d28402f936ed19f87e9a7f647d26f216a0f1c515a0b15b6401",
   urls = [
     "https://github.com/supranational/blst/archive/refs/tags/v0.3.10.tar.gz",
   ]
