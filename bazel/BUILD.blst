@@ -1,0 +1,13 @@
+cc_library(
+    name = "blst",
+    hdrs = glob(["bindings/*.h"],),
+    visibility = ["//visibility:public"]
+)
+
+genrule(
+    name = "blst-build",
+    srcs = glob(["src/**/*", "build/**/*"]),
+    outs = ["libblst.a"],
+    cmd = "$(location build.sh)",
+    tools = ["build.sh"]
+)

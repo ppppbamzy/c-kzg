@@ -14,5 +14,7 @@ add_library(${PROJECT_NAME}
 )
 
 add_dependencies(${PROJECT_NAME} blst_lib)
-target_link_libraries(${PROJECT_NAME} PRIVATE ${BLST_LIB_FILE})
 target_include_directories(${PROJECT_NAME} PRIVATE ${blst_SOURCE_DIR}/bindings/)
+# target_link_directories(${PROJECT_NAME} PRIVATE ${blst_SOURCE_DIR})
+# target_link_libraries(${PROJECT_NAME} PRIVATE blst)
+set(CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS} ${BLST_LIB_FILE}")

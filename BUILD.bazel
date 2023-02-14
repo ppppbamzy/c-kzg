@@ -1,7 +1,8 @@
 cc_library(
     name = "c-kzg",
-    srcs = glob(["src/*.c"]),
-    hdrs = glob(["src/*.h", "inc/*.h"]),
+    srcs = glob(["src/*.c"], exclude = ["src/test*", "src/*_bench.c", "src/*_tune.c"]),
+    hdrs = glob(["src/*.h", "inc/*.h"]), 
+    copts = ["-Iexternal/com_github_blst/bindings"],
     visibility = ["//visibility:public"],
-    deps = ["@com_github_blst"]
+    deps = ["@com_github_blst//:blst"]
 )

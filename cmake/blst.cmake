@@ -11,7 +11,7 @@ if(NOT blst_POPULATED)
     FetchContent_Populate(blst)
 endif()
 
-SET(BLST_LIB_FILE ${blst_SOURCE_DIR}/libblast.a)
+SET(BLST_LIB_FILE ${blst_SOURCE_DIR}/libblst.a)
 add_custom_command(
     OUTPUT ${BLST_LIB_FILE} 
     COMMAND ./build.sh 
